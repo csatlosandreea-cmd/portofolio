@@ -385,7 +385,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
     <div
-      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}
+      className={`sm-scope ${isFixed ? 'z-40 fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'} ${!open && 'pointer-events-none'}`}
     >
       <div
         className={
@@ -418,7 +418,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between px-4 py-2 bg-transparent pointer-events-none z-20"
+          className="staggered-menu-header absolute top-0 left-0 w-full max-h-screen! flex items-center justify-between px-4 py-2 bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
           <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
@@ -514,7 +514,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             </ul>
 
             {displaySocials && socialItems && socialItems.length > 0 && (
-              <div className="sm-socials mt-auto pt-8 flex flex-col gap-3" aria-label="Social links">
+              <div className="sm-socials pt-0! mt-4! flex flex-col gap-3" aria-label="Social links">
                 <h3 className="sm-socials-title m-0 text-base font-medium text-(--sm-accent,#ff0000)">Socials</h3>
                 <ul
                   className="sm-socials-list list-none m-0 p-0 flex flex-row items-center gap-4 flex-wrap"

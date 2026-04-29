@@ -16,7 +16,7 @@ const MobileNavbar = () => {
     { label: 'Contact', link: '/contact' },
     { label: 'Projects', link: '/projects' },
     { label: 'Experience', link: '/experience' },
-    { label: 'About Me', link: '/about' },
+    { label: 'About Me', link: '/about-me' },
     { label: 'Contact', link: '/contact' },
   ];
 
