@@ -6,27 +6,27 @@ export interface ProjectCategories {
 const projectsCategories: ProjectCategories[] = [
   {
     insideText: "Logos",
-    link: "/projects/logos"
+    link: "/projects-gallery?tab=logos"
   },
   {
     insideText: "Websites",
-    link: "/projects/websites"
+    link: "/projects-gallery?tab=websites"
   },
   {
     insideText: "Posters",
-    link: "/projects/posters"
+    link: "/projects-gallery?tab=posters"
   },
   {
     insideText: "T-Shirts",
-    link: "/projects/tshirts"
+    link: "/projects-gallery?tab=tshirts"
   },
   {
     insideText: "Stickers",
-    link: "/projects/stickers"
+    link: "/projects-gallery?tab=stickers"
   },
   {
     insideText: "Apps",
-    link: "/projects/apps"
+    link: "/projects-gallery?tab=apps"
   },
 ]
 

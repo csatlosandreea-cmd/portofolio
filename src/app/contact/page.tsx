@@ -88,7 +88,7 @@ const ContactPage = () => {
         id='form-contact' 
         onSubmit={form.handleSubmit(onSubmit)}
         className={cn(
-          'w-full mx-auto mt-8',
+          'w-full mx-auto mt-16',
           'sm:w-3/4',
           'md:w-3/5',
           'md:w-2/5'
@@ -100,20 +100,13 @@ const ContactPage = () => {
             control={form.control}
             render={({ field, fieldState }) => (
               <Field data-invalid={fieldState.invalid}>
-                <div className='flex-center-between'>
-                  <FieldLabel htmlFor='form-email' className={cn(
-                    'text-white! text-xl',
-                    '2xl:text-2xl'
-                  )}>
-                    Email
-                  </FieldLabel>
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
-                  )}
-                </div>
+                {fieldState.invalid && (
+                  <FieldError errors={[fieldState.error]} />
+                )}
                 <Input
                   {...field}
                   id='form-email'
+                  placeholder='Email'
                   aria-invalid={fieldState.invalid}
                   className={cn(
                     'rounded-none! border-0 border-b border-b-white text-white text-xl',
@@ -128,20 +121,13 @@ const ContactPage = () => {
             control={form.control}
             render={({ field, fieldState }) => (
               <Field data-invalid={fieldState.invalid}>
-                <div className='flex-center-between'>
-                  <FieldLabel htmlFor='form-text' className={cn(
-                    'text-white! text-xl',
-                    '2xl:text-2xl'
-                  )}>
-                    Message
-                  </FieldLabel>
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
-                  )}
-                </div>
+                {fieldState.invalid && (
+                  <FieldError errors={[fieldState.error]} />
+                )}
                 <Textarea
                   {...field}
                   id='form-text'
+                  placeholder='Your message'
                   aria-invalid={fieldState.invalid}
                   autoComplete='off'
                   className={cn(

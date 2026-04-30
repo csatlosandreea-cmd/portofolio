@@ -385,7 +385,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
     <div
-      className={`sm-scope ${isFixed ? 'z-40 fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'} ${!open && 'pointer-events-none'}`}
+      className={`sm-scope z-40 ${isFixed ? ' fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'} ${open ? "pointer-events-auto" : "pointer-events-none"}`}
     >
       <div
         className={
