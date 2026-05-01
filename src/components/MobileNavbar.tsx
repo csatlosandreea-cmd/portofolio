@@ -23,7 +23,7 @@ const MobileNavbar = () => {
   return (
     <div 
       style={{ height: '100vh', background: 'transparent' }} 
-      className='w-full h-full absolute lg:hidden'
+      className='w-full absolute lg:hidden'
     >
       <StaggeredMenu
         position='right'

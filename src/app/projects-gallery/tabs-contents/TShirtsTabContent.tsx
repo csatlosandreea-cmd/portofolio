@@ -13,37 +13,26 @@ import { Swiper as SwiperType } from 'swiper/types';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { cn } from '@/src/lib/utils'
+import { IconArrowNarrowRight } from '@tabler/icons-react'
 
-const allTShirts = [
-  {
-    src: tShirt1,
-    style: 'w-40'
-  },
-  {
-    src: tShirt2,
-    style: 'w-40'
-  },
-  {
-    src: tShirt3,
-    style: 'w-40'
-  },
-  {
-    src: tShirt4,
-    style: 'w-40'
-  },
-]
+const allTShirts = [tShirt1, tShirt2, tShirt3, tShirt4]
 
 const TShirtsTabContent = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null)
 
   return (
     <div className='flex flex-cols h-full relative'>
+      <div className='flex-center justify-center gap-2 px-3 text-2xl mt-14'>
+        <span>just swipe</span>
+        <IconArrowNarrowRight size={32} />
+      </div>
+
       <Swiper
         onSwiper={setSwiper}
         centeredSlides
         slidesPerView={1}
         className={cn(
-          'w-full relative mt-24',
+          'w-full relative mt-8',
           'sm:w-3/4',
           'md:w-1/2',
         )}
@@ -68,14 +57,14 @@ const TShirtsTabContent = () => {
               mixBlendMode="screen"
               height={200}
               width={300}
-              className='mx-auto'
+              className='mx-auto bg-gray-400/40!'
             >
               <Image
-                src={t.src}
+                src={t}
                 alt='t-shirt'
                 width={200}
                 height={200}
-                className={t.style}
+                className='w-40'
               />
             </GlassSurface>
           </SwiperSlide>
