@@ -256,7 +256,7 @@ export default function OrbitImages({
           if (setLogo)
             setLogo(item)
         }}
-        className="w-full h-full object-contain"
+        className={"w-full h-full object-contain " + (item?.imgStyle || '')}
       />
     </div>
   ));

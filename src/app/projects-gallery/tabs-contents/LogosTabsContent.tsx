@@ -3,6 +3,7 @@
 import OrbitImages from '@components/OrbitImages';
 import newsAppLogo from '@public/assets/newsapp-logo.png'
 import solarisLogo from '@public/assets/solaris-logo.png'
+import automobileServiceLogo from '@public/assets/automobile-service-logo.png'
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { cn } from '@/src/lib/utils'
@@ -12,6 +13,7 @@ import Image from 'next/image';
 export interface Logo {
   src: string;
   title: string;
+  imgStyle?: string;
 }
 
 const images: Logo[] = [
@@ -22,6 +24,11 @@ const images: Logo[] = [
   {
     src: solarisLogo.src,
     title: 'Solaris Tales',
+  },
+  {
+    src: automobileServiceLogo.src,
+    title: 'Autmobile Service',
+    imgStyle: 'p-10'
   },
 ]
 
@@ -75,7 +82,7 @@ const LogosTabsContent = () => {
             alt='Logo'
             width={200}
             height={200}
-            className='w-full'
+            className={'w-full ' + (currentLogo?.imgStyle || '')}
           />
         </div>
       )}

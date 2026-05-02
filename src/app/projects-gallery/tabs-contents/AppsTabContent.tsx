@@ -6,23 +6,21 @@ import React from 'react'
 const AppsTabContent = () => {
   return (
     <div>
-      <h1>News App</h1>
+      <h1 className='text-3xl mb-4'>News App</h1>
 
-      <p>
+      <p className='text-2xl'>
         Is a mobile ecosystem designed to merge 
         real-time data with user safety.
       </p>
 
-      <div className='flex items-baseline mt-auto absolute bottom-0 scale-110'>
+      <div className='flex items-baseline mt-20 absolute bottom-0'>
         <Image
           src={mokker1}
           alt='mokker'
-          className=''
         />
         <Image
           src={mokker2}
           alt='mokker'
-          className=''
         />
       </div>
     </div>

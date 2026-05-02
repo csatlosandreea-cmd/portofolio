@@ -1,33 +1,75 @@
-import Image from 'next/image'
-import solaris1 from '@public/assets/solaris1.png'
-import solaris2 from '@public/assets/solaris2.png'
-import React from 'react'
+import React, { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperType } from 'swiper/types';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import { cn } from '@lib/utils';
+import SolarisWebsite from './websites/SolarisWebsite';
+import RecruitmentWebsite from './websites/RecruitmentWebsite';
+import PeterWebsite from './websites/PeterWebsite';
+import MyPortfolio from './websites/MyPortfolio';
+import { IconPointFilled } from '@tabler/icons-react';
+
+const allWebsites = [
+  {
+    title: 'Solaris Tales',
+    comp: SolarisWebsite
+  },
+  {
+    title: 'Recruitment',
+    comp: RecruitmentWebsite
+  },
+  {
+    title: 'Peter',
+    comp: PeterWebsite
+  },
+  {
+    title: 'Solaris tales',
+    comp: MyPortfolio
+  },
+]
 
 const WebsitesTabContent = () => {
+  const [swiper, setSwiper] = useState<SwiperType | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number>(0)
+
   return (
     <div className='pb-8'>
-      <p className='text-3xl'>
-        Solaris Tales is an e-commerce platform 
-        dedicated to book lovers
-      </p>
-
-      <div className='flex flex-col items-end mt-6'>
-        <Image
-          src={solaris1}
-          alt='Solaris Tales'
-          width={100}
-          height={100}
-          className='w-3/5 -mb-30'
-        />
-        <Image
-          src={solaris2}
-          alt='Solaris Tales'
-          width={100}
-          height={100}
-          className='w-3/5 mr-8 z-20'
-        />
-
+      <div className={cn(
+        'flex-center gap-1 w-fit bg-black/20 backdrop-blur-md mx-auto p-2 rounded-full',
+        'md:mt-4',
+        'lg:hidden!'
+      )}>
+        {Array(4).fill(0).map((_, i) => (
+          <IconPointFilled key={i} className={cn(
+            'text-white z-10 opacity-40 transition-all duration-200 ease-in',
+            activeIndex === i && 'opacity-100'
+          )} />
+        ))}
       </div>
+
+      <Swiper
+        onSwiper={setSwiper}
+        centeredSlides
+        slidesPerView={1}
+        className={cn(
+          'w-full relative mt-8',
+          'sm:w-3/4',
+          'md:w-1/2',
+        )}
+        onSlideChange={() => setActiveIndex(swiper?.activeIndex || 0)}
+      >
+        {allWebsites.map((web, i) => (
+          <SwiperSlide
+            key={i}
+            className={cn(
+              'w-full flex items-center px-4 justify-center transition-all duration-300 ease-in-out',
+            )}
+          >
+            <web.comp />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   )
 }
