@@ -7,6 +7,7 @@ import {
   IconAlertTriangle, IconCircleCheck, 
   IconCircleX, IconInfoCircle 
 } from '@tabler/icons-react';
+import Navbar from "@components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#141414] overflow-x-hidden">
         <MobileNavbar />
+        <Navbar />
         {children}
 
         <Toaster
