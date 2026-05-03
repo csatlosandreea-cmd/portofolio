@@ -98,7 +98,7 @@ const CircularText: React.FC<CircularTextProps> = ({
     <div className='relative'>
       <Link 
         href={link}
-        className='absolute text-white text-3xl top-1/2 left-1/2 -translate-1/2'
+        className='absolute whitespace-nowrap text-white text-3xl top-1/2 left-1/2 -translate-1/2'
       >
         {insideText}
       </Link>

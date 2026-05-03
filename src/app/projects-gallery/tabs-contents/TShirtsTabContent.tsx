@@ -22,7 +22,7 @@ const TShirtsTabContent = () => {
 
   return (
     <div className='flex flex-cols h-full relative'>
-      <div className='flex-center justify-center gap-2 px-3 text-2xl mt-14'>
+      <div className='flex-center justify-center gap-2 px-3 text-2xl mt-8'>
         <span>just swipe</span>
         <IconArrowNarrowRight size={32} />
       </div>

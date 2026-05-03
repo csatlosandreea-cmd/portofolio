@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 import aphrodite from '@public/assets/aphrodite.png'
-import tShirt1 from '@public/assets/tshirt1.png'
-import tShirt2 from '@public/assets/tshirt2.png'
-import tShirt3 from '@public/assets/tshirt3.png'
-import tShirt4 from '@public/assets/tshirt4.png'
+import sticker1 from '@public/assets/sticker1.png'
+import sticker2 from '@public/assets/sticker2.png'
+import sticker3 from '@public/assets/sticker3.png'
+import sticker4 from '@public/assets/sticker4.png'
 import React, { useState } from 'react'
 import GlassSurface from '@components/GlassSurface'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,7 +15,7 @@ import 'swiper/css/effect-coverflow';
 import { cn } from '@/src/lib/utils'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 
-const allTShirts = [tShirt1, tShirt2, tShirt3, tShirt4]
+const allStickers = [sticker1, sticker2, sticker3, sticker4]
 
 const PostersTabContent = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null)
@@ -32,7 +32,7 @@ const PostersTabContent = () => {
           'md:w-1/2',
         )}
       >
-        {allTShirts.map((t, i) => (
+        {allStickers.map((s, i) => (
           <SwiperSlide
             key={i}
             className={cn(
@@ -55,7 +55,7 @@ const PostersTabContent = () => {
               className='mx-auto bg-gray-400/40!'
             >
               <Image
-                src={t.src}
+                src={s.src}
                 alt='t-shirt'
                 width={200}
                 height={200}

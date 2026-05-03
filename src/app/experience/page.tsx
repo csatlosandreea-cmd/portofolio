@@ -16,7 +16,40 @@ const ExperiencePage = () => {
 
   return (
     <div className='pt-32 pb-8 min-h-screen text-white relative'>
-      <h1 className='uppercase text-3xl mx-auto mb-32 text-center text-white'>Fluid Progression</h1>
+      <h1 className={cn(
+        'uppercase text-3xl mx-auto mb-32 text-center text-white',
+        'lg:mb-16',
+        'xl:text-5xl xl:mb-32'
+      )}>Fluid Progression</h1>
+
+      <div className={cn(
+        'hidden items-start justify-around gap-8',
+        'lg:flex',
+        'xl:px-20 xl:gap-16'
+      )}>
+        {progress.map((p, i) => (
+          <div 
+            key={i} 
+            className={cn(
+              'flex flex-col items-center gap-2',
+              `mt-${i * 8}`
+            )}
+          >
+            <h3 className='text-xl text-center'>{p?.title || 'Empty'}</h3>
+
+            <Image
+              src={p.image}
+              alt={p?.role || "not_known"}
+              width={200}
+              height={200}
+              className='w-full'
+            />
+
+            <span>{p.year}</span>
+            <span className='text-center'>{p?.role}</span>
+          </div>
+        ))}
+      </div>
 
       <div className='w-full lg:hidden'>
         <Swiper
@@ -26,7 +59,6 @@ const ExperiencePage = () => {
           className={cn(
             'w-full relative',
             'sm:w-3/4',
-            'md:w-1/2',
           )}
           onSlideChange={(e) => setActiveIndex(e.activeIndex)}
         >
@@ -39,7 +71,7 @@ const ExperiencePage = () => {
               )}
             >
               <div className='flex flex-col items-center gap-2'>
-                <h3 className='text-xl'>{p?.title || 'Empty'}</h3>
+                <h3 className='text-xl text-center'>{p?.title || 'Empty'}</h3>
 
                 <Image
                   src={p.image}
@@ -50,7 +82,7 @@ const ExperiencePage = () => {
                 />
 
                 <span>{p.year}</span>
-                <span>{p?.role}</span>
+                <span className='text-center'>{p?.role}</span>
               </div>
             </SwiperSlide>
           ))}
@@ -58,7 +90,7 @@ const ExperiencePage = () => {
       </div>
 
       <div className={cn(
-          'flex-center w-1/3 mt-8 gap-1 mx-auto p-2 rounded-full',
+          'flex-center w-fit mt-8 gap-1 mx-auto p-2 rounded-full',
           'md:mt-4',
           'lg:hidden!'
         )}>
@@ -75,7 +107,12 @@ const ExperiencePage = () => {
           alt={"blob"}
           width={100}
           height={100}
-          className='w-1/2 absolute -bottom-8 -left-5'
+          className={cn(
+            'w-1/2 absolute -bottom-8 -left-5',
+            'sm:w-50',
+            'lg:hidden',
+            'xl:block xl:w-65'
+          )}
         />
     </div>
   )
