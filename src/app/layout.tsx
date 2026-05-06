@@ -8,6 +8,7 @@ import {
   IconCircleX, IconInfoCircle 
 } from '@tabler/icons-react';
 import Navbar from "@components/Navbar";
+import VideoBackground from "@components/VideoBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden`}
     >
       <body className="min-h-full flex flex-col bg-[#141414] overflow-x-hidden">
+        <VideoBackground />
         <MobileNavbar />
         <Navbar />
         {children}

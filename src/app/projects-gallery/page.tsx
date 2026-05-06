@@ -55,7 +55,10 @@ const ProjectGallery = () => {
   }
 
   return (
-    <div className="pt-32 pb-8 px-8 z-10 h-screen text-white">
+    <div className={cn(
+      "pt-32 pb-8 px-8 z-10 h-screen text-white",
+      'lg:pt-24'
+    )}>
       <Tabs
         value={value}
         onValueChange={setValue}
@@ -70,11 +73,17 @@ const ProjectGallery = () => {
           ))}
         </TabsList>
 
-        <div className="flex items-center justify-between mb-4">
+        <div className={cn(
+          "flex items-center justify-between mb-4 w-full z-30",
+          'lg:justify-start'
+        )}>
           <IconChevronLeft
             size={48}
             onClick={prev}
-            className={cn(currentIndex === 0 && 'pointer-events-none opacity-50')}
+            className={cn(
+              currentIndex === 0 && 'pointer-events-none opacity-50',
+              'lg:mr-4'
+            )}
           />
 
           <h1 className='text-4xl'>{tabs[currentIndex].title}</h1>
@@ -82,7 +91,10 @@ const ProjectGallery = () => {
           <IconChevronRight
             size={48}
             onClick={next}
-            className={cn(currentIndex === tabs.length - 1 && 'pointer-events-none opacity-50')}
+            className={cn(
+              currentIndex === tabs.length - 1 && 'pointer-events-none opacity-50',
+              'lg:ml-auto'
+            )}
           />
         </div>
 

@@ -54,8 +54,6 @@ const WebsitesTabContent = () => {
         slidesPerView={1}
         className={cn(
           'w-full relative mt-8',
-          'sm:w-3/4',
-          'md:w-1/2',
         )}
         onSlideChange={() => setActiveIndex(swiper?.activeIndex || 0)}
       >

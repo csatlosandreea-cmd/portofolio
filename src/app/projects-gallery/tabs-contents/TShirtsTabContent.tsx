@@ -21,62 +21,114 @@ const TShirtsTabContent = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null)
 
   return (
-    <div className='flex flex-cols h-full relative'>
-      <div className='flex-center justify-center gap-2 px-3 text-2xl mt-8'>
+    <div className={cn(
+      'flex flex-cols h-full relative',
+      'xl:px-32'
+    )}>
+      <div className='flex items-center justify-center gap-2 px-3 text-2xl mt-8 lg:hidden'>
         <span>just swipe</span>
         <IconArrowNarrowRight size={32} />
       </div>
 
-      <Swiper
-        onSwiper={setSwiper}
-        centeredSlides
-        slidesPerView={1}
-        className={cn(
-          'w-full relative mt-8',
-          'sm:w-3/4',
-          'md:w-1/2',
-        )}
-      >
+      <div className={cn(
+        'hidden text-2xl',
+        'lg:block',
+        'xl:text-4xl xl:mt-16'
+      )}>
+        <span>This is</span>
+        <h1 className={cn(
+          'text-5xl my-2',
+          'xl:text-7xl'
+        )}>Zeus</h1>
+        <span>Not me, I promise</span>
+      </div>
+
+      <div className='hidden items-center gap-16 mt-auto overflow-x-scroll z-10 flex-nowrap lg:flex'>
         {allTShirts.map((t, i) => (
-          <SwiperSlide
+          <GlassSurface
             key={i}
-            className={cn(
-              'w-full flex items-center justify-center transition-all duration-300 ease-in-out',
-            )}
+            displace={0.8}
+            distortionScale={-180}
+            redOffset={0}
+            greenOffset={10}
+            blur={10}
+            borderWidth={0.2}
+            blueOffset={20}
+            brightness={50}
+            opacity={0.93}
+            mixBlendMode="screen"
+            height={150}
+            width={250}
+            className='mx-auto bg-gray-400/40! shrink-0'
           >
-            <GlassSurface
-              displace={0.8}
-              distortionScale={-180}
-              redOffset={0}
-              greenOffset={10}
-              blur={10}
-              borderWidth={0.2}
-              blueOffset={20}
-              brightness={50}
-              opacity={0.93}
-              mixBlendMode="screen"
+            <Image
+              src={t}
+              alt='t-shirt'
+              width={200}
               height={200}
-              width={300}
-              className='mx-auto bg-gray-400/40!'
+              className='w-40'
+            />
+          </GlassSurface>
+          ))}
+      </div>
+
+      <div className='block lg:hidden'>
+        <Swiper
+          onSwiper={setSwiper}
+          centeredSlides
+          slidesPerView={1}
+          className={cn(
+            'w-full relative mt-8',
+            'sm:w-3/4',
+            'md:w-1/2',
+          )}
+        >
+          {allTShirts.map((t, i) => (
+            <SwiperSlide
+              key={i}
+              className={cn(
+                'w-full flex items-center justify-center transition-all duration-300 ease-in-out',
+              )}
             >
-              <Image
-                src={t}
-                alt='t-shirt'
-                width={200}
+              <GlassSurface
+                displace={0.8}
+                distortionScale={-180}
+                redOffset={0}
+                greenOffset={10}
+                blur={10}
+                borderWidth={0.2}
+                blueOffset={20}
+                brightness={50}
+                opacity={0.93}
+                mixBlendMode="screen"
                 height={200}
-                className='w-40'
-              />
-            </GlassSurface>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+                width={300}
+                className='mx-auto bg-gray-400/40!'
+              >
+                <Image
+                  src={t}
+                  alt='t-shirt'
+                  width={200}
+                  height={200}
+                  className='w-40'
+                />
+              </GlassSurface>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       <Image
         src={zeus}
         alt='Zeus'
         width={100}
         height={100}
-        className='w-1/2 absolute -bottom-4 -right-4 scale-125'
+        className={cn(
+          'w-1/2 absolute -bottom-4 -right-4 scale-125',
+          'md:w-1/3',
+          'lg:rotate-y-180 lg:w-50 lg:right-1/2 lg:translate-x-1/2',
+          'xl:w-1/4'
+        )}
       />
     </div>
   )

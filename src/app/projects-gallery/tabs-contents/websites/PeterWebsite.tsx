@@ -1,43 +1,58 @@
 import Image from 'next/image'
-import website2_1 from '@public/assets/websites/website2-1.png'
-import website2_2 from '@public/assets/websites/website2-2.png'
-import website2_3 from '@public/assets/websites/website2-3.png'
-import React from 'react'
+import website1_1 from '@public/assets/websites/website2-1.png'
+import website1_2 from '@public/assets/websites/website2-2.png'
+import website1_3 from '@public/assets/websites/website2-3.png'
+import React, { useEffect, useState } from 'react'
+import { cn } from '@/src/lib/utils'
+
+const imgs = [website1_1, website1_2, website1_3]
 
 const PeterWebsite = () => {
-  return (
-    <>
-      <p className='text-xl mb-4'>Full-Stack Developer Portfolio</p>
-      <p className='text-xl opacity-75'>
-        A comprehensive digital showcase designed 
-        to highlight technical expertise through 
-        a minimalist lens.
-      </p>
+  const [activeImg, setActiveImg] = useState<number>(0)
 
-      <div className='flex flex-col w-full items-end rleative mt-6'>
-        <Image
-          src={website2_1}
-          alt='Recruitment'
-          width={100}
-          height={100}
-          className='w-full z-20'
-        />
-        <Image
-          src={website2_2}
-          alt='Recruitment'
-          width={100}
-          height={100}
-          className='w-85/100 z-10 -mt-14 mx-auto'
-        />
-        <Image
-          src={website2_3}
-          alt='Recruitment'
-          width={100}
-          height={100}
-          className='w-75/100 -mt-12 mx-auto'
-        />
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImg(prev => prev === 2 ? 0 : prev + 1)
+    }, 3500)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
+
+  return (
+    <div className={cn(
+      'h-full',
+      'lg:flex lg:flex-row'
+    )}>
+      <div className='w-full'>
+        <p className='text-xl mb-4 lg:hidden'>Full-Stack Developer</p>
+        <h1 className='hidden text-7xl text-center mb-16 lg:block'>View Here</h1>
+
+        <div className={cn(
+          'mx-auto rounded-xl',
+          'lg:bg-[#d9d9d933] lg:text-xl lg:px-6 lg:py-2 lg:w-4/5 lg:border lg:border-white lg:backdrop-blur-md',
+          'xl:max-w-3/4 xl:text-2xl',
+          '2xl:text-3xl'
+        )}>
+          A comprehensive digital showcase designed
+          to highlight technical expertise through a 
+          minimalist lens. This project focuses on high-impact 
+          visual storytelling and robust technical implementation.
+        </div>
       </div>
-    </>
+
+      <Image
+        src={imgs[activeImg]}
+        alt='Solaris Tales'
+        width={100}
+        height={100}
+        className={cn(
+          'w-full aspect-[9:16] mt-4',
+          'lg:mb-0 lg:w-3/4'
+        )}
+      />
+    </div>
   )
 }
 
