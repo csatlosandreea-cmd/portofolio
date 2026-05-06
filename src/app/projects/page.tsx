@@ -22,10 +22,10 @@ const page = () => {
         {projectsCategories.map((project, i) => (
           <CircularText
             key={i}
-            text="MY*PROJECTS*"
-            onHover="speedUp"
+            text='MY*PROJECTS*'
+            onHover='speedUp'
             spinDuration={20}
-            className={"custom-class"}
+            className={'custom-class'}
             index={i}
             insideText={project.insideText}
             link={project.link}
@@ -40,10 +40,10 @@ const page = () => {
         {firstGroup.map((project, i) => (
           <CircularText
             key={i}
-            text="MY*PROJECTS*"
-            onHover="speedUp"
+            text='MY*PROJECTS*'
+            onHover='speedUp'
             spinDuration={20}
-            className={"custom-class"}
+            className={'custom-class'}
             index={i}
             insideText={project.insideText}
             link={project.link}
@@ -57,10 +57,10 @@ const page = () => {
         {secondGroup.map((project, i) => (
           <CircularText
             key={i}
-            text="MY*PROJECTS*"
-            onHover="speedUp"
+            text='MY*PROJECTS*'
+            onHover='speedUp'
             spinDuration={20}
-            className={"custom-class"}
+            className={'custom-class'}
             index={i}
             insideText={project.insideText}
             link={project.link}

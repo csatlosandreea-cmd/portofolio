@@ -1,13 +1,12 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import progress from './progress'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import { IconPointFilled } from '@tabler/icons-react';
 import { cn } from '@/src/lib/utils';
 import Image from 'next/image';
-import blob from '@public/assets/blob.png'
 import 'swiper/css';
 
 const ExperiencePage = () => {
@@ -39,7 +38,7 @@ const ExperiencePage = () => {
 
             <Image
               src={p.image}
-              alt={p?.role || "not_known"}
+              alt={p?.role || 'not_known'}
               width={200}
               height={200}
               className='w-full'
@@ -75,7 +74,7 @@ const ExperiencePage = () => {
 
                 <Image
                   src={p.image}
-                  alt={p?.role || "not_known"}
+                  alt={p?.role || 'not_known'}
                   width={200}
                   height={200}
                   className='w-full'
@@ -103,8 +102,8 @@ const ExperiencePage = () => {
         </div>
 
         <Image
-          src={blob}
-          alt={"blob"}
+          src='/assets/blob.png'
+          alt={'blob'}
           width={100}
           height={100}
           className={cn(

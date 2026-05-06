@@ -17,9 +17,9 @@ const VideoBackground = () => {
         muted
         loop
         playsInline
-        className="fixed inset-0 w-full h-full object-cover -z-10"
+        className='fixed inset-0 w-full h-full object-cover -z-10'
       >
-        <source src="/assets/drop-video.mp4" type="video/mp4" />
+        <source src='/assets/drop-video.mp4' type='video/mp4' />
       </video>
     </div>
   )

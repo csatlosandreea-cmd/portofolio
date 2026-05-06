@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import solaris1 from '@public/assets/solaris1.png'
-import solaris2 from '@public/assets/solaris2.png'
 import { cn } from '@/src/lib/utils'
 
-const imgs = [solaris1, solaris2]
+const imgs = [
+  '/assets/solaris1.png', 
+  '/assets/solaris2.png'
+]
 
 const SolarisWebsite = () => {
   const [activeImg, setActiveImg] = useState<number>(0)

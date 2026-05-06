@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import {
@@ -13,7 +13,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@components/ui/accordion"
+} from '@components/ui/accordion'
 import { Input } from '@components/ui/input'
 import { Button } from '@components/ui/button'
 import { Controller, useForm } from 'react-hook-form'
@@ -28,7 +28,6 @@ import { useForm as useFormSpree } from '@formspree/react';
 import { toast } from 'sonner'
 import Link from 'next/link'
 import Image from 'next/image'
-import blob from '@public/assets/contact-blob.png'
 
 export const createFormSchema = () =>
   z.object({
@@ -57,9 +56,9 @@ const ContactPage = () => {
     try {
       await handleSubmit(data)
 
-      toast.success("Message sent")
+      toast.success('Message sent')
     } catch {
-      toast.error("Error occured while sending the message")
+      toast.error('Error occured while sending the message')
     }
 
     setIsSending(false)
@@ -171,7 +170,7 @@ const ContactPage = () => {
               {isSending ? (
                 <IconLoader2 className='rotate' size={20} />
               ) : (
-                "Send"
+                'Send'
               )}
             </Button>
           </Field>
@@ -188,7 +187,7 @@ const ContactPage = () => {
             'xl:text-4xl'
           )}>FAQ</h2>
           <Accordion 
-            type="single" 
+            type='single' 
             collapsible 
             className={cn(
               'mt-2',
@@ -196,7 +195,7 @@ const ContactPage = () => {
               'xl:text-2xl!'
             )}
           >
-            <AccordionItem value="item-1">
+            <AccordionItem value='item-1'>
               <AccordionTrigger className='xl:text-xl'>What service do I offer?</AccordionTrigger>
               <AccordionContent className='xl:text-lg! xl:opacity-85'>
                 I provide comprehensive visual communication solutions, 
@@ -204,7 +203,7 @@ const ContactPage = () => {
                 to digital or print advertising materials and motion graphics that bring messages to life.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2">
+            <AccordionItem value='item-2'>
               <AccordionTrigger className='xl:text-xl'>How is the delivery time?</AccordionTrigger>
               <AccordionContent className='xl:text-lg! xl:opacity-85'>
                 The duration of the project is contingent 
@@ -212,7 +211,7 @@ const ContactPage = () => {
                 requirements.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3">
+            <AccordionItem value='item-3'>
               <AccordionTrigger className='xl:text-xl'>How much does a project cost?</AccordionTrigger>
               <AccordionContent className='xl:text-lg! xl:opacity-85'>
                 The pricing is contingent upon the 
@@ -224,7 +223,7 @@ const ContactPage = () => {
       </div>
 
       <Image
-        src={blob}
+        src='/assets/contact-blob.png'
         alt='blob'
         width={300}
         height={300}

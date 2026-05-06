@@ -1,14 +1,10 @@
 'use client'
 
 import OrbitImages from '@components/OrbitImages';
-import newsAppLogo from '@public/assets/newsapp-logo.png'
-import solarisLogo from '@public/assets/solaris-logo.png'
-import automobileServiceLogo from '@public/assets/automobile-service-logo.png'
-import logosImg from '@public/assets/logos-img.png'
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { cn } from '@/src/lib/utils'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useBreakpoint } from '@src/hooks/useBreakpoints';
 import Image from 'next/image';
 
@@ -37,16 +33,16 @@ export interface Logo {
 
 const images: Logo[] = [
   {
-    src: newsAppLogo.src,
+    src: '/assets/newsapp-logo.png',
     title: 'News App',
   },
   {
-    src: solarisLogo.src,
+    src: '/assets/solaris-logo.png',
     title: 'Solaris Tales',
   },
   {
-    src: automobileServiceLogo.src,
-    title: 'Autmobile Service',
+    src: '/assets/automobile-service-logo.png',
+    title: 'Automobile Service',
     imgStyle: 'p-10'
   },
 ]
@@ -66,7 +62,7 @@ const LogosTabsContent = () => {
         <div className='relative'>
           <OrbitImages
             images={images}
-            shape="ellipse"
+            shape='ellipse'
             radiusX={radiusX}
             radiusY={radiusY}
             rotation={-8}
@@ -74,7 +70,7 @@ const LogosTabsContent = () => {
             itemSize={itemSize}
             responsive={true}
             radius={160}
-            direction="normal"
+            direction='normal'
             showPath
             pathColor={'rgba(255,255,255,0.6)'}
             className={cn(
@@ -85,7 +81,7 @@ const LogosTabsContent = () => {
             setLogo={setCurrentLogo}
           />
           <OrbitImages
-            shape="ellipse"
+            shape='ellipse'
             radiusX={radiusX}
             radiusY={radiusY}
             rotation={-14}
@@ -93,7 +89,7 @@ const LogosTabsContent = () => {
             itemSize={itemSize}
             responsive={true}
             radius={160}
-            direction="normal"
+            direction='normal'
             showPath
             pathColor={'rgba(255,255,255,0.6)'}
             className='absolute! top-0 z-10 opacity-70 w-fit h-fit'

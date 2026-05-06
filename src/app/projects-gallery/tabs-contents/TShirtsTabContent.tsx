@@ -1,12 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import zeus from '@public/assets/zeus.png'
-import tShirt1 from '@public/assets/tshirt1.png'
-import tShirt2 from '@public/assets/tshirt2.png'
-import tShirt3 from '@public/assets/tshirt3.png'
-import tShirt4 from '@public/assets/tshirt4.png'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import GlassSurface from '@components/GlassSurface'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
@@ -15,7 +10,12 @@ import 'swiper/css/effect-coverflow';
 import { cn } from '@/src/lib/utils'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 
-const allTShirts = [tShirt1, tShirt2, tShirt3, tShirt4]
+const allTShirts = [
+  '/assets/tshirt1.png',
+  '/assets/tshirt2.png',
+  '/assets/tshirt3.png',
+  '/assets/tshirt4.png'
+]
 
 const TShirtsTabContent = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null)
@@ -56,7 +56,7 @@ const TShirtsTabContent = () => {
             blueOffset={20}
             brightness={50}
             opacity={0.93}
-            mixBlendMode="screen"
+            mixBlendMode='screen'
             height={150}
             width={250}
             className='mx-auto bg-gray-400/40! shrink-0'
@@ -100,7 +100,7 @@ const TShirtsTabContent = () => {
                 blueOffset={20}
                 brightness={50}
                 opacity={0.93}
-                mixBlendMode="screen"
+                mixBlendMode='screen'
                 height={200}
                 width={300}
                 className='mx-auto bg-gray-400/40!'
@@ -119,7 +119,7 @@ const TShirtsTabContent = () => {
       </div>
 
       <Image
-        src={zeus}
+        src='/assets/zeus.png'
         alt='Zeus'
         width={100}
         height={100}

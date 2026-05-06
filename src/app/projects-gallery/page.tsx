@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation'
 import {
   Tabs,
@@ -7,12 +8,14 @@ import {
   TabsList,
   TabsTrigger
 } from '@components/ui/tabs'
-import React, { useEffect, useMemo, useState } from 'react'
+import { 
+  useEffect, useMemo, useState 
+} from 'react'
 import tabs from './tabs'
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react'
 import { cn } from '@/src/lib/utils'
 
-const ProjectGallery = () => {
+const ProjectGalleryContent = () => {
   const searchParams = useSearchParams()
   const router = useRouter()
 
@@ -56,16 +59,16 @@ const ProjectGallery = () => {
 
   return (
     <div className={cn(
-      "pt-32 pb-8 px-8 z-10 h-screen text-white",
+      'pt-32 pb-8 px-8 z-10 h-screen text-white',
       'lg:pt-24'
     )}>
       <Tabs
         value={value}
         onValueChange={setValue}
-        className="w-full h-full"
+        className='w-full h-full'
       >
         
-        <TabsList className="hidden">
+        <TabsList className='hidden'>
           {tabs.map((t) => (
             <TabsTrigger key={t.value} value={t.value}>
               {t.value}
@@ -74,7 +77,7 @@ const ProjectGallery = () => {
         </TabsList>
 
         <div className={cn(
-          "flex items-center justify-between mb-4 w-full z-30",
+          'flex items-center justify-between mb-4 w-full z-30',
           'lg:justify-start'
         )}>
           <IconChevronLeft
@@ -109,6 +112,14 @@ const ProjectGallery = () => {
         ))}
       </Tabs>
     </div>
+  )
+}
+
+const ProjectGallery = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectGalleryContent />
+    </Suspense>
   )
 }
 

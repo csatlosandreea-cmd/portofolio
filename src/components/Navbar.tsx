@@ -1,8 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import logo from '@public/assets/logo.png';
-import React from 'react'
 import { cn } from '../lib/utils'
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -33,7 +31,7 @@ const Navbar = () => {
     <div className={cn('hidden relative', 'lg:block')}>
       <Link href={'/'}>
         <Image
-          src={logo}
+          src={'/assets/logo.png'}
           alt='Logo'
           width={300}
           height={300}

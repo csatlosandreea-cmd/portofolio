@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import website1_1 from '@public/assets/websites/website2-1.png'
-import website1_2 from '@public/assets/websites/website2-2.png'
-import website1_3 from '@public/assets/websites/website2-3.png'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { cn } from '@/src/lib/utils'
 
-const imgs = [website1_1, website1_2, website1_3]
+const imgs = [
+  '/assets/websites/website2-1.png', 
+  '/assets/websites/website2-2.png', 
+  '/assets/websites/website2-3.png'
+]
 
 const PeterWebsite = () => {
   const [activeImg, setActiveImg] = useState<number>(0)
@@ -48,7 +49,7 @@ const PeterWebsite = () => {
         width={100}
         height={100}
         className={cn(
-          'w-full aspect-[9:16] mt-4',
+          'w-full aspect-9/16 mt-4',
           'lg:mb-0 lg:w-3/4'
         )}
       />

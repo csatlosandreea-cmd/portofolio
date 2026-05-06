@@ -1,10 +1,10 @@
-import { title } from "process"
-import AppsTabContent from "./tabs-contents/AppsTabContent"
-import LogosTabsContent from "./tabs-contents/LogosTabsContent"
-import PostersTabContent from "./tabs-contents/PostersTabContent"
-import StickersTabContent from "./tabs-contents/StickersTabContent"
-import TShirtsTabContent from "./tabs-contents/TShirtsTabContent"
-import WebsitesTabContent from "./tabs-contents/WebsitesTabContent"
+import { title } from 'process'
+import AppsTabContent from './tabs-contents/AppsTabContent'
+import LogosTabsContent from './tabs-contents/LogosTabsContent'
+import PostersTabContent from './tabs-contents/PostersTabContent'
+import StickersTabContent from './tabs-contents/StickersTabContent'
+import TShirtsTabContent from './tabs-contents/TShirtsTabContent'
+import WebsitesTabContent from './tabs-contents/WebsitesTabContent'
 
 const tabs = [
   {

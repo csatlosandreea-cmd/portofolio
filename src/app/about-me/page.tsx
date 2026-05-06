@@ -1,18 +1,13 @@
-import React from 'react'
-import programs from "@public/assets/programs-about.png"
 import Image from 'next/image'
 import { cn } from '@/src/lib/utils'
-import aboutImg from '@public/assets/about-imgs/about-img.png'
-import about1 from '@public/assets/about-imgs/about1.png'
-import about2 from '@public/assets/about-imgs/about2.png'
-import about3 from '@public/assets/about-imgs/about3.png'
-import about4 from '@public/assets/about-imgs/about4.png'
-import about5 from '@public/assets/about-imgs/about5.png'
-import about6 from '@public/assets/about-imgs/about6.png'
 
 const aboutImgs = [
-  about1, about2, about3,
-  about4, about5, about6
+  '/assets/about-imgs/about1.png',
+  '/assets/about-imgs/about2.png',
+  '/assets/about-imgs/about3.png',
+  '/assets/about-imgs/about4.png',
+  '/assets/about-imgs/about5.png',
+  '/assets/about-imgs/about6.png'
 ]
 
 const AboutPage = () => {
@@ -22,7 +17,7 @@ const AboutPage = () => {
       'lg:flex lg:px-12'
     )}>
       <Image
-        src={aboutImg}
+        src='/assets/about-imgs/about-img.png'
         alt='img'
         width={300}
         height={300}
@@ -72,7 +67,7 @@ const AboutPage = () => {
       </div>
 
       <Image
-        src={programs}
+        src='/assets/programs-about.png'
         alt=''
         width={300}
         height={300}

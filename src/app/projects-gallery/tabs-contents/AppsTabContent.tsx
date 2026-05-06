@@ -1,7 +1,4 @@
 import Image from 'next/image'
-import mokker1 from '@public/assets/mokker1.png'
-import mokker2 from '@public/assets/mokker2.png'
-import React from 'react'
 import { cn } from '@/src/lib/utils'
 
 const AppsTabContent = () => {
@@ -46,11 +43,11 @@ const AppsTabContent = () => {
         'sm:w-3/5',
       )}>
         <Image
-          src={mokker1}
+          src='/assets/mokker1.png'
           alt='mokker'
         />
         <Image
-          src={mokker2}
+          src='/assets/mokker2.png'
           alt='mokker'
         />
       </div>

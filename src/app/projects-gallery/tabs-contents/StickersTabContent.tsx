@@ -1,12 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import aphrodite from '@public/assets/aphrodite.png'
-import sticker1 from '@public/assets/sticker1.png'
-import sticker2 from '@public/assets/sticker2.png'
-import sticker3 from '@public/assets/sticker3.png'
-import sticker4 from '@public/assets/sticker4.png'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import GlassSurface from '@components/GlassSurface'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
@@ -15,7 +10,12 @@ import 'swiper/css/effect-coverflow';
 import { cn } from '@/src/lib/utils'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 
-const allStickers = [sticker1, sticker2, sticker3, sticker4]
+const allStickers = [
+  '/assets/sticker1.png',
+  '/assets/sticker2.png',
+  '/assets/sticker3.png',
+  '/assets/sticker4.png'
+]
 
 const PostersTabContent = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null)
@@ -50,13 +50,13 @@ const PostersTabContent = () => {
                 blueOffset={20}
                 brightness={50}
                 opacity={0.93}
-                mixBlendMode="screen"
+                mixBlendMode='screen'
                 height={200}
                 width={300}
                 className='mx-auto bg-gray-400/40!'
               >
                 <Image
-                  src={s.src}
+                  src={s}
                   alt='t-shirt'
                   width={200}
                   height={200}
@@ -77,7 +77,7 @@ const PostersTabContent = () => {
       </div>
 
       <Image
-        src={aphrodite}
+        src='/assets/aphrodite.png'
         alt='Aphrodite'
         width={100}
         height={100}
@@ -128,13 +128,13 @@ const PostersTabContent = () => {
             blueOffset={20}
             brightness={50}
             opacity={0.93}
-            mixBlendMode="screen"
+            mixBlendMode='screen'
             height={200}
             width={300}
             className='mx-auto bg-gray-400/40! shrink-0'
           >
             <Image
-              src={s.src}
+              src={s}
               alt='t-shirt'
               width={200}
               height={200}

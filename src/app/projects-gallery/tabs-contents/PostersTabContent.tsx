@@ -1,15 +1,16 @@
 'use client'
 
 import Image from 'next/image'
-import poster1 from '@public/assets/poster1.png'
-import poster2 from '@public/assets/poster2.png'
-import poster3 from '@public/assets/poster3.png'
-import poster4 from '@public/assets/poster4.png'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Grainient from '@components/Grainient'
 import { cn } from '@/src/lib/utils'
 
-const imgs = [poster1, poster2, poster3, poster4]
+const imgs = [
+  '/assets/poster1.png',
+  '/assets/poster2.png',
+  '/assets/poster3.png',
+  '/assets/poster4.png'
+]
 
 const PostersTabContent = () => {
   const [imgVisible, setImgVisible] = useState<number>(0)
@@ -60,9 +61,9 @@ const PostersTabContent = () => {
           'xl:w-100 h-100'
         )}>
           <Grainient
-            color1="#FF9FFC"
-            color2="#5227FF"
-            color3="#B497CF"
+            color1='#FF9FFC'
+            color2='#5227FF'
+            color3='#B497CF'
             timeSpeed={1.5}
             colorBalance={0}
             warpStrength={1}
