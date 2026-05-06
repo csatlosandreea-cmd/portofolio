@@ -34,13 +34,13 @@ const AboutPage = () => {
 
       <div>
         <h1 className={cn(
-          'uppercase text-5xl mx-auto text-center text-white',
+          'heroeau uppercase text-5xl mx-auto text-center text-white',
           'lg:text-6xl'
         )}
         >About Me</h1>
 
         <p className={cn(
-          'text-xl mt-6 px-8 text-center',
+          'hepta text-xl mt-6 px-8 text-center',
           'md:px-16',
           'lg:max-w-150 lg:text-2xl',
           'xl:px-4'
@@ -49,6 +49,7 @@ const AboutPage = () => {
           From the algorithms I studied at &quot;Carmen Sylva&quot; Petrosani 
           to the engineering complexities at Politehnica Timișoara (ETCTI), 
           I approach design as a logical system rather than just an aesthetic pursuit.
+          <br /> <br /> 
           Today, I transform technical concepts into intuitive visual solutions, 
           proving that discipline and creativity are essential parts of the same equation.
         </p>

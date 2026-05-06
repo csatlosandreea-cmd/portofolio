@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Hepta_Slab } from "next/font/google";
 import "./globals.css";
 import MobileNavbar from "@/src/components/MobileNavbar";
 import { Toaster } from 'sonner';
@@ -16,6 +16,11 @@ const geistSans = Geist({
 });
 
 const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const heptaSlab = Hepta_Slab({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });

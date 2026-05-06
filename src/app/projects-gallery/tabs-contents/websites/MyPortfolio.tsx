@@ -27,10 +27,10 @@ const MyPortfolio = () => {
     )}>
       <div className='w-full'>
         <p className='text-xl mb-4 lg:hidden'>My portofolio | Designer Graphic</p>
-        <h1 className='hidden text-7xl text-center mb-16 lg:block'>View Here</h1>
+        <h1 className='heroeau hidden text-7xl text-center mb-16 lg:block'>View Here</h1>
 
         <div className={cn(
-          'mx-auto rounded-xl',
+          'hepta mx-auto rounded-xl',
           'lg:bg-[#d9d9d933] lg:text-xl lg:px-6 lg:py-2 lg:w-4/5 lg:border lg:border-white lg:backdrop-blur-md',
           'xl:max-w-3/4 xl:text-2xl',
           '2xl:text-3xl'

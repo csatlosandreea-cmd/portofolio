@@ -60,8 +60,8 @@ const LogosTabsContent = () => {
   return (
     <div>
       <h1 className={cn(
-        'mt-8 text-5xl text-center',
-        'lg:mt-4 lg:text-3xl'
+        'heroeau mt-8 text-5xl text-center',
+        'lg:mt-4 lg:text-4xl'
       )}>Every brand has a voice</h1>
         <div className='relative'>
           <OrbitImages

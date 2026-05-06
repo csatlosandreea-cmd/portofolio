@@ -26,7 +26,7 @@ const SolarisWebsite = () => {
     )}>
       <div className='w-full'>
         <p className='text-xl mb-4 lg:hidden'>Solaris Tales</p>
-        <h1 className='hidden text-7xl text-center mb-16 lg:block'>View Here</h1>
+        <h1 className='heroeau hidden text-7xl text-center mb-16 lg:block'>View Here</h1>
 
         <div className={cn(
           'py-2 mx-auto rounded-xl',
@@ -34,24 +34,24 @@ const SolarisWebsite = () => {
           'xl:max-w-3/5'
         )}>
           <p className={cn(
-            'text-xl opacity-75',
+            'hepta text-xl opacity-75',
             'lg:opacity-100 lg:text-xl',
             'xl:text-3xl'
           )}>
             Solaris Tales is an e-commerce platform 
             dedicated to book lovers
-            <span className={cn(
-              'hidden text-xl opacity-75 ml-2',
-              'lg:opacity-100 lg:text-xl lg:block',
-              'xl:text-3xl'
-            )}>
-              where design meets the classic atmosphere of
-              a prestigious library. The objective was to 
-              create an interface that eliminates the coldness of 
-              standard online stores, offering the user a warm, 
-              tactile, and sophisticated experience.
-            </span>
           </p>
+          <span className={cn(
+            'hepta hidden text-xl opacity-75 ml-2',
+            'lg:opacity-100 lg:text-xl lg:inline',
+            'xl:text-3xl'
+          )}>
+            where design meets the classic atmosphere of
+            a prestigious library. The objective was to 
+            create an interface that eliminates the coldness of 
+            standard online stores, offering the user a warm, 
+            tactile, and sophisticated experience.
+          </span>
         </div>
       </div>
 

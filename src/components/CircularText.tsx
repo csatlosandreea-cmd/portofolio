@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation, useMotionValue, MotionValue, Transition } from 'motion/react';
 import Link from 'next/link';
+import { cn } from '../lib/utils';
 interface CircularTextProps {
   text: string;
   spinDuration?: number;
@@ -8,6 +9,7 @@ interface CircularTextProps {
   className?: string;
   insideText: string;
   link: string;
+  index: number;
 }
 
 const getRotationTransition = (duration: number, from: number, loop: boolean = true) => ({
@@ -34,7 +36,8 @@ const CircularText: React.FC<CircularTextProps> = ({
   onHover = 'speedUp',
   className = '',
   insideText,
-  link
+  link,
+  index
 }) => {
   const letters = Array.from(text);
   const controls = useAnimation();
@@ -95,10 +98,14 @@ const CircularText: React.FC<CircularTextProps> = ({
   };
 
   return (
-    <div className='relative'>
+    <div className={cn(
+      'relative my-4', 
+      index % 2 > 0 ? 'ml-auto' : 'mr-auto',
+      'lg:mx-0'
+    )}>
       <Link 
         href={link}
-        className='absolute whitespace-nowrap text-white text-3xl top-1/2 left-1/2 -translate-1/2'
+        className='hepta absolute whitespace-nowrap text-white text-3xl top-1/2 left-1/2 -translate-1/2'
       >
         {insideText}
       </Link>

@@ -91,13 +91,13 @@ const PostersTabContent = () => {
         )}
       />
       <div className={cn(
-        'flex flex-cols items-end justify-end gap-2 text-2xl absolute bottom-0 -right-4',
+        'flex flex-cols z-20 items-end justify-end gap-2 text-2xl absolute bottom-0 -right-4',
         'lg:top-0 lg:left-0 lg:items-start lg:justify-start',
         'xl:left-30 xl:mt-20'
       )}>
-        <span>This is</span>
-        <h3 className='text-5xl'>Aphrodite</h3>
-        <span>not me</span>
+        <span className='hepta'>This is</span>
+        <h3 className='heroeau text-5xl'>Aphrodite</h3>
+        <span className='hepta'>not me</span>
       </div>
 
       <div className={cn(
@@ -105,9 +105,9 @@ const PostersTabContent = () => {
         'lg:block',
         'xl:ml-30'
       )}>
-        <p>I think she is <br /> very dangerous...</p>
-        <p>Oh, yeah... she is</p>
-        <p>Goddess of Love!</p>
+        <p className='hepta'>I think she is <br /> very dangerous...</p>
+        <p className='hepta'>Oh, yeah... she is</p>
+        <p className='hepta'>Goddess of Love!</p>
       </div>
 
       <div className={cn(

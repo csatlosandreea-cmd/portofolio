@@ -35,12 +35,12 @@ const TShirtsTabContent = () => {
         'lg:block',
         'xl:text-4xl xl:mt-16'
       )}>
-        <span>This is</span>
+        <span className='hepta'>This is</span>
         <h1 className={cn(
-          'text-5xl my-2',
+          'heroeau text-5xl my-2',
           'xl:text-7xl'
         )}>Zeus</h1>
-        <span>Not me, I promise</span>
+        <span className='hepta'>Not me, I promise</span>
       </div>
 
       <div className='hidden items-center gap-16 mt-auto overflow-x-scroll z-10 flex-nowrap lg:flex'>

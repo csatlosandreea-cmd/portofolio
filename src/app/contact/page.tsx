@@ -74,7 +74,7 @@ const ContactPage = () => {
       'xl:px-32 xl:pt-32'
     )}>
       <h1 className={cn(
-        'uppercase text-5xl mx-auto text-center text-white',
+        'heroeau uppercase text-5xl mx-auto text-center text-white',
         'lg:text-4xl',
         'xl:text-5xl'
       )}>Contact</h1>

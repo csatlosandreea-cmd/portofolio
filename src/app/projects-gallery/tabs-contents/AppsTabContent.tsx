@@ -15,7 +15,7 @@ const AppsTabContent = () => {
         'lg:w-3/4'
       )}>
         <h1 className={cn(
-          'text-3xl mb-4',
+          'heroeau text-3xl mb-4',
           'lg:text-center lg:text-4xl',
           'xl:text-5xl'
         )}>News App</h1>
@@ -23,13 +23,13 @@ const AppsTabContent = () => {
           'lg:bg-[#D9D9D933] px-6 py-2 mx-auto rounded-xl lg:border lg:border-white lg:backdrop-blur-md',
           'xl:max-w-3/4'
         )}>
-          <p className='text-2xl'>
+          <span className='hepta text-2xl'>
             Is a mobile ecosystem designed to merge 
             real-time data with user safety.
-          </p>
-          <p className={cn(
-            'hidden text-2xl',
-            'lg:block'
+          </span>
+          <span className={cn(
+            'hepta hidden text-2xl ml-2',
+            'lg:inline'
           )}>
             It&apos;s a mobile ecosystem designed to merge
             real-time data with user safety. The project focuses on 
@@ -37,7 +37,7 @@ const AppsTabContent = () => {
             with instant access to critical information—such as road 
             conditions, medical assistance, and vehicle diagnostics—through 
             a unified digital cockpit.
-          </p>
+          </span>
         </div>
       </div>
 

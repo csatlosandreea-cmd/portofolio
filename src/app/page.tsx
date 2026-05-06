@@ -104,10 +104,13 @@ export default function Home() {
             'lg:hidden'
           )}
         >
-          <div className="flex flex-col items-center justify-center text-white text-center whitespace-nowrap text-4xl">
-            <span>Hello, I am</span>
-            <span>ANDREEA</span>
-            <span>Graphic Designer</span>
+          <div className="flex flex-col items-center justify-center text-white text-center whitespace-nowrap text-2xl">
+            <span className="uppercase hepta">Hello, I am</span>
+            <span className="uppercase hepta text-4xl">
+              <span className="heroeau">A</span>
+              ndreea
+            </span>
+            <span className="uppercase hepta">Graphic Designer</span>
           </div>
         </GlassSurface>
 
@@ -129,19 +132,22 @@ export default function Home() {
             'lg:hidden'
           )}
         >
-          <div className="flex items-center justify-center text-white text-center whitespace-nowrap uppercase text-2xl">
-            <span>Focus. Create. Grow</span>
+          <div className="flex items-center justify-center text-white text-center whitespace-nowrap uppercase text-xl">
+            <span className="hepta">Focus. Create. Grow</span>
           </div>
         </GlassSurface>
 
         <div className={cn(
-          "hidden flex-col pl-8 items-start justify-start text-white text-center whitespace-nowrap text-4xl gap-2",
+          "hidden flex-col pl-8 items-start justify-start text-white text-center whitespace-nowrap text-3xl gap-2",
           'lg:flex',
-          'xl:text-6xl'
+          'xl:text-4xl'
         )}>
-          <span>Hello, I am</span>
-          <span>ANDREEA</span>
-          <span>Graphic Designer</span>
+          <span className="hepta">Hello, I am</span>
+          <span className="hepta uppercase my-2 text-7xl">
+            <span className="heroeau">A</span>
+            <span className="hepta">ndreea</span>
+          </span>
+          <span className="hepta">Graphic Designer</span>
         </div>
 
         <Image
@@ -149,7 +155,7 @@ export default function Home() {
           alt='Blob'
           width={300}
           height={300}
-          className='w-40 absolute bottom-0 left-0'
+          className='hidden w-40 absolute bottom-0 left-0 lg:block'
         />
       </main>
     </div>

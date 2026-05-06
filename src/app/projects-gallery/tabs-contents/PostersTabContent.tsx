@@ -25,20 +25,21 @@ const PostersTabContent = () => {
   }, [])
 
   return (
-    <div className='flex items-center justify-around h-full'>
+    <div className='flex flex-col items-center justify-around h-full lg:flex-row'>
       <div className={cn(
-        'text-2xl ml-8',
+        'hidden text-2xl ml-8',
+        'lg:block',
         'xl:text-4xl'
       )}>
         <h1 className={cn(
-          'text-7xl uppercase mt-8',
+          'hepta text-7xl uppercase mt-8',
           'xl:text-9xl'
         )}>Next...</h1>
-        <p className='mt-16'>I think she is very...</p>
-        <span>(You complete this sentence)</span>
+        <p className='hepta mt-16'>I think she is very...</p>
+        <span className='hepta'>(You complete this sentence)</span>
       </div>
 
-      <div className='relative'>
+      <div className='hidden relative lg:block'>
         {imgs.map((im, i) => (
           <Image
             key={i}
@@ -86,7 +87,7 @@ const PostersTabContent = () => {
         </div>
       </div>
 
-      <div className='flex flex-col justify-center gap-8 z-0 lg:hidden'>
+      <div className='flex flex-col w-3/4 justify-center gap-8 z-0 lg:hidden'>
         {imgs.map((im, i) => (
           <Image
             key={i}
@@ -94,7 +95,11 @@ const PostersTabContent = () => {
             alt='Poster'
             width={300}
             height={300}
-            className={cn('w-3/4', i % 2 > 0 && 'ml-auto')}
+            className={cn(
+              'w-full', 
+              i % 2 > 0 && 'ml-auto',
+              'lg:w-3/4'
+            )}
           />
         ))}
       </div>

@@ -117,6 +117,20 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@font-face {
+  font-family: 'Hepta';
+  src: url('/assets/fonts/HeptaSlab.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Heroeau';
+  src: url('/assets/fonts/heroeau-elegant.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 * {
   font-family: sans-serif;
 }
@@ -160,6 +174,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hepta {
+  font-family: 'Hepta';
+}
+
+.heroeau {
+  font-family: 'Heroeau'
 }
 
 @layer base {

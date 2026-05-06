@@ -17,7 +17,7 @@ const ExperiencePage = () => {
   return (
     <div className='pt-32 pb-8 min-h-screen text-white relative'>
       <h1 className={cn(
-        'uppercase text-3xl mx-auto mb-32 text-center text-white',
+        'heroeau uppercase text-3xl mx-auto mb-32 text-center text-white',
         'lg:mb-16',
         'xl:text-5xl xl:mb-32'
       )}>Fluid Progression</h1>
