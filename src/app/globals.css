@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -160,7 +159,7 @@
 
 .flex-cols {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .flex-columns-center {
@@ -181,7 +180,7 @@
 }
 
 .heroeau {
-  font-family: 'Heroeau'
+  font-family: 'Heroeau';
 }
 
 @layer base {
