@@ -124,9 +124,9 @@ const TShirtsTabContent = () => {
         width={100}
         height={100}
         className={cn(
-          'w-1/2 z-10 absolute -bottom-4 -right-4 scale-125',
+          'w-1/2 z-10 absolute -bottom-4 rotate-y-180 -right-4 scale-125',
           'md:w-1/3',
-          'lg:rotate-y-180 lg:w-50 lg:right-1/2 lg:translate-x-1/2 lg:z-0',
+          'lg:rotate-y-0 lg:w-50 lg:right-1/2 lg:translate-x-1/2 lg:z-0',
           'xl:w-1/4'
         )}
       />
