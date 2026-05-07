@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { cn } from '@/src/lib/utils'
+import { cn } from '@src/lib/utils'
 
 const aboutImgs = [
   '/assets/about-imgs/about1.png',

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import Grainient from '@components/Grainient'
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 
 const imgs = [
   '/assets/poster1.png',

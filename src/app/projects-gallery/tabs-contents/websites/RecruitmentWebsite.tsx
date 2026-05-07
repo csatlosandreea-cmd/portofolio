@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 
 const imgs = [
   '/assets/websites/website1-1.png', 

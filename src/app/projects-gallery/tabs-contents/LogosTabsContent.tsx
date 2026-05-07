@@ -3,7 +3,7 @@
 import OrbitImages from '@components/OrbitImages';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 import { useState } from 'react'
 import { useBreakpoint } from '@src/hooks/useBreakpoints';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import Image from 'next/image';
 const getRadius = (bp: string) => {
   switch (bp) {
     case '2xl':
-      return { radiusX: 500, radiusY: 140, itemSize: 40 }
+      return { radiusX: 500, radiusY: 140, itemSize: 200 }
     case 'xl':
       return { radiusX: 440, radiusY: 120, itemSize: 200 }
     case 'lg':

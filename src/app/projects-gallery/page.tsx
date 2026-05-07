@@ -13,7 +13,7 @@ import {
 } from 'react'
 import tabs from './tabs'
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react'
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 
 const ProjectGalleryContent = () => {
   const searchParams = useSearchParams()

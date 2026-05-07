@@ -1,4 +1,3 @@
-import { title } from 'process'
 import AppsTabContent from './tabs-contents/AppsTabContent'
 import LogosTabsContent from './tabs-contents/LogosTabsContent'
 import PostersTabContent from './tabs-contents/PostersTabContent'

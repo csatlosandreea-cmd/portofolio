@@ -3,9 +3,18 @@
 import StaggeredMenu from './StaggeredMenu';
 
 const socialItems = [
-  { label: 'LinkedIn', link: 'https://www.linkedin.com/in/andreea-florentina-csatlos-musan-8682aa343' },
-  { label: 'Instagram', link: 'https://www.instagram.com/a._andreea_a' },
-  { label: 'Facebook', link: 'https://www.facebook.com/andreea.florentina.106' }
+  { 
+    label: 'LinkedIn', 
+    link: 'https://www.linkedin.com/in/andreea-florentina-csatlos-musan-8682aa343' 
+  },
+  { 
+    label: 'Instagram', 
+    link: 'https://www.instagram.com/a._andreea_a' 
+  },
+  { 
+    label: 'Facebook', 
+    link: 'https://www.facebook.com/andreea.florentina.106' 
+  }
 ];
 
 

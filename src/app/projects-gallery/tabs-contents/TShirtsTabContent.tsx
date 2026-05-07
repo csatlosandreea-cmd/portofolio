@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 
 const allTShirts = [
@@ -40,7 +40,7 @@ const TShirtsTabContent = () => {
           'heroeau text-5xl my-2',
           'xl:text-7xl'
         )}>Zeus</h1>
-        <span className='hepta'>Not me, I promise</span>
+        <span className='hepta'>Not me</span>
       </div>
 
       <div className='hidden items-center gap-16 mt-auto overflow-x-scroll z-10 flex-nowrap lg:flex'>
@@ -124,9 +124,9 @@ const TShirtsTabContent = () => {
         width={100}
         height={100}
         className={cn(
-          'w-1/2 absolute -bottom-4 -right-4 scale-125',
+          'w-1/2 z-10 absolute -bottom-4 -right-4 scale-125',
           'md:w-1/3',
-          'lg:rotate-y-180 lg:w-50 lg:right-1/2 lg:translate-x-1/2',
+          'lg:rotate-y-180 lg:w-50 lg:right-1/2 lg:translate-x-1/2 lg:z-0',
           'xl:w-1/4'
         )}
       />

@@ -5,7 +5,7 @@ import progress from './progress'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import { IconPointFilled } from '@tabler/icons-react';
-import { cn } from '@/src/lib/utils';
+import { cn } from '@lib/utils';
 import Image from 'next/image';
 import 'swiper/css';
 

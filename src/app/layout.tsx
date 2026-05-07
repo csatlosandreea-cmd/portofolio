@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Hepta_Slab } from 'next/font/google';
 import './globals.css';
-import MobileNavbar from '@/src/components/MobileNavbar';
+import MobileNavbar from '@components/MobileNavbar';
 import { Toaster } from 'sonner';
 import { 
   IconAlertTriangle, IconCircleCheck, 

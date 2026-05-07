@@ -22,7 +22,7 @@ import {
   IconBrandLinkedin, IconMail,
   IconLoader2  
 } from '@tabler/icons-react'
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 import { Textarea } from '@components/ui/textarea'
 import { useForm as useFormSpree } from '@formspree/react';
 import { toast } from 'sonner'

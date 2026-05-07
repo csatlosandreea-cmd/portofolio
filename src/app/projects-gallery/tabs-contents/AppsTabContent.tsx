@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 
 const AppsTabContent = () => {
   return (
@@ -45,10 +45,22 @@ const AppsTabContent = () => {
         <Image
           src='/assets/mokker1.png'
           alt='mokker'
+          width={200}
+          height={200}
+          className={cn(
+            'w-full',
+            'lg:w-1/2'
+          )}
         />
         <Image
           src='/assets/mokker2.png'
           alt='mokker'
+          width={200}
+          height={200}
+          className={cn(
+            'w-full',
+            'lg:mt-0 lg:w-1/2'
+          )}
         />
       </div>
     </div>

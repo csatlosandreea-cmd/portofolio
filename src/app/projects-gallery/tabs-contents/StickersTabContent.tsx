@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import { cn } from '@/src/lib/utils'
+import { cn } from '@lib/utils'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 
 const allStickers = [
@@ -97,7 +97,7 @@ const PostersTabContent = () => {
       )}>
         <span className='hepta'>This is</span>
         <h3 className='heroeau text-5xl'>Aphrodite</h3>
-        <span className='hepta'>not me</span>
+        <span className='hepta'>I promise</span>
       </div>
 
       <div className={cn(
