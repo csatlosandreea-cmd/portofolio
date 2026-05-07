@@ -22,32 +22,36 @@ const ExperiencePage = () => {
       )}>Fluid Progression</h1>
 
       <div className={cn(
-        'hidden items-start justify-around gap-8',
+        'hidden items-start justify-around h-full gap-8',
         'lg:flex',
         'xl:px-20 xl:gap-16'
       )}>
-        {progress.map((p, i) => (
-          <div 
-            key={i} 
-            className={cn(
-              'flex flex-col items-center gap-2',
-              `mt-${i * 8}`
-            )}
-          >
-            <h3 className='text-xl text-center'>{p?.title || 'Empty'}</h3>
+        {progress.map((p, i) => {
+          const margins = ['mt-0', 'mt-12', 'mt-24', 'mt-36'];
+          
+          return (
+            <div 
+              key={i} 
+              className={cn(
+                'flex flex-col items-center gap-2',
+                margins[i] || 'mt-0' 
+              )}
+            >
+              <h3 className='text-xl text-center'>{p?.title || 'Empty'}</h3>
 
-            <Image
-              src={p.image}
-              alt={p?.role || 'not_known'}
-              width={200}
-              height={200}
-              className='w-full'
-            />
+              <Image
+                src={p.image}
+                alt={p?.role || 'not_known'}
+                width={200}
+                height={200}
+                className='w-full'
+              />
 
-            <span>{p.year}</span>
-            <span className='text-center'>{p?.role}</span>
-          </div>
-        ))}
+              <span>{p.year}</span>
+              <span className='text-center'>{p?.role}</span>
+            </div>
+          );
+        })}
       </div>
 
       <div className='w-full lg:hidden'>

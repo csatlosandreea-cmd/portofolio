@@ -8,7 +8,7 @@ import SolarisWebsite from './websites/SolarisWebsite';
 import RecruitmentWebsite from './websites/RecruitmentWebsite';
 import PeterWebsite from './websites/PeterWebsite';
 import MyPortfolio from './websites/MyPortfolio';
-import { IconPointFilled } from '@tabler/icons-react';
+import { IconChevronLeft, IconChevronRight, IconPointFilled } from '@tabler/icons-react';
 
 const allWebsites = [
   {
@@ -35,17 +35,32 @@ const WebsitesTabContent = () => {
 
   return (
     <div className='pb-8'>
-      <div className={cn(
-        'flex-center gap-1 w-fit bg-black/20 backdrop-blur-md mx-auto p-2 rounded-full',
-        'md:mt-4',
-        'lg:hidden!'
-      )}>
-        {Array(4).fill(0).map((_, i) => (
-          <IconPointFilled key={i} className={cn(
-            'text-white z-10 opacity-40 transition-all duration-200 ease-in',
-            activeIndex === i && 'opacity-100'
-          )} />
-        ))}
+      <div className='flex items-end justify-center gap-8 w-fit mx-auto'>
+        <div className={cn(
+          'flex-center gap-1 w-fit bg-black/20 backdrop-blur-md mx-auto p-2 rounded-full',
+          'md:mt-4',
+          ''
+        )}>
+          {Array(4).fill(0).map((_, i) => (
+            <IconPointFilled key={i} className={cn(
+              'text-white z-10 opacity-40 transition-all duration-200 ease-in',
+              activeIndex === i && 'opacity-100'
+            )} />
+          ))}
+        </div>
+        
+        <div className='flex items-center gap-4 z-20'>
+          <IconChevronLeft 
+            size={32} 
+            className='text-whtie z-20' 
+            onClick={() => swiper?.slidePrev()}
+          />
+          <IconChevronRight 
+            size={32} 
+            className='text-whtie z-20' 
+            onClick={() => swiper?.slideNext()}
+          />
+        </div>
       </div>
 
       <Swiper

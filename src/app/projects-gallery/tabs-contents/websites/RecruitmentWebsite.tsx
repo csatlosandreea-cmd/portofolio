@@ -51,7 +51,7 @@ const RecruitmentWebsite = () => {
         width={100}
         height={100}
         className={cn(
-          'w-full aspect-9/16 mt-4',
+          'w-full aspect-video mt-4',
           'lg:mb-0 lg:w-3/4'
         )}
       />
