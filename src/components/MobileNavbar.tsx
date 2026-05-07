@@ -21,7 +21,6 @@ const socialItems = [
 const MobileNavbar = () => {
   const menuItems = [
     { label: 'Home', link: '/' },
-    { label: 'Contact', link: '/contact' },
     { label: 'Projects', link: '/projects' },
     { label: 'Experience', link: '/experience' },
     { label: 'About Me', link: '/about-me' },
